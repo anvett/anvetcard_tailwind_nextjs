@@ -10,7 +10,7 @@ const SocialMediaButtons = ({ socialLinks }) => {
             <Image
               src={`/assets/icons/${link.icon}`}
               alt={`${link.type} icon`}
-              layout='fill' // Utiliza todo el espacio disponible
+              fill // Utiliza todo el espacio disponible
               objectFit='contain' // Ajusta la imagen dentro del espacio sin cortarla
             />
           </div>

@@ -15,11 +15,11 @@ import PaymentInfo from "@/components/cardContent/PaymentInfo/PaymentInfo.jsx";
 
 export default function Home() {
   const profileData = {
-    name: "Eva Doe",
-    title: "Gerente General Coac SUP Ltda",
+    name: "Andrés Veintimilla",
+    title: "Presidente Anvetcorp S.A.S.",
     image: "/assets/images/profile/profile1.jpg",
     description:
-      "Ingeniera Comercial con más de 10 años de experiencia en el sector financiero. Me apasiona el trabajo en equipo y la innovación en el sector de las cooperativas de ahorro y crédito. ",
+      "Soy un profesional con más de 10 años de experiencia en el desarrollo de software. Me especializo en soluciones de fintech y en la implementación de metodologías ágiles. Actualmente, lidero un equipo de desarrolladores en Tech Innovations Inc. y soy el presidente de Anvetcorp S.A.S.",
   };
 
   //---------------------------------------------------------
