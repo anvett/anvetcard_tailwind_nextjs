@@ -11,7 +11,7 @@ const SocialMediaIcons = ({ socialLinks }) => {
               src={`/assets/icons/${link.icon}`} // Asegura que el path es correcto
               alt={`${link.type} icon`}
               fill
-              objectFit="contain"
+              className="object-contain"
             />
           </div>
         </a>

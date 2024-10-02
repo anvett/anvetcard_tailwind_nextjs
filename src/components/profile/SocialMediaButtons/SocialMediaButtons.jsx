@@ -11,7 +11,7 @@ const SocialMediaButtons = ({ socialLinks }) => {
               src={`/assets/icons/${link.icon}`}
               alt={`${link.type} icon`}
               fill // Utiliza todo el espacio disponible
-              objectFit='contain' // Ajusta la imagen dentro del espacio sin cortarla
+              className="object-contain"
             />
           </div>
           <span>{link.text}</span>

@@ -28,7 +28,7 @@ const ContactIcons = ({ contacts }) => {
             <p className='text-center pb-spacing-2 text-light'>{modalContent.address}</p>
             <p className='text-center pb-spacing-2 text-light'>{modalContent.hours}</p>
             <div className="modal-action">
-              <a href={`https://www.google.com/maps/dir/?api=1&destination=${encodeURIComponent(modalContent.address)}`} className="btn contact-button">Ver en Google Maps</a>
+              <a href={modalContent.googleMapsLink} className="btn contact-button" target="_blank" rel="noopener noreferrer">Ver en Google Maps</a>
               <a href="#" className="btn contact-button" onClick={() => setShowModal(false)}>Cerrar</a>
             </div>
           </div>
@@ -39,4 +39,3 @@ const ContactIcons = ({ contacts }) => {
 };
 
 export default ContactIcons;
-

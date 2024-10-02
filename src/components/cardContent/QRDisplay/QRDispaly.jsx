@@ -9,9 +9,8 @@ const QRDisplay = ({ qrImage, title }) => {
         <Image
           src={qrImage}
           alt="QR Code"
-          layout="fill"  // Utiliza el espacio del contenedor completamente
-          objectFit="contain"  // Asegura que la imagen no se distorsione
-          className='rounded-lg my-spacing-2'  // Bordes redondeados
+          fill  
+          className='rounded-lg my-spacing-2 object-contain'  
         />
       </div>
     </div>

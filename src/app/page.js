@@ -13,14 +13,18 @@ import VideoPlayer from "@/components/VideoPlayer/VideoPlayer.jsx";
 import QRDisplay from "@/components/cardContent/QRDisplay/QRDispaly.jsx";
 import PaymentInfo from "@/components/cardContent/PaymentInfo/PaymentInfo.jsx";
 
+
 export default function Home() {
   const profileData = {
     name: "Andrés Veintimilla",
-    title: "Presidente Anvetcorp S.A.S.",
-    image: "/assets/images/profile/profile1.jpg",
-    description:
-      "Soy un profesional con más de 10 años de experiencia en el desarrollo de software. Me especializo en soluciones de fintech y en la implementación de metodologías ágiles. Actualmente, lidero un equipo de desarrolladores en Tech Innovations Inc. y soy el presidente de Anvetcorp S.A.S.",
+    title: "Presidente y CEO de Anvetcorp S.A.S.",
+    image: "/assets/images/profile/andres-veintimilla.jpg",
+    description: "Soy Ingeniero Informático con más de 15 años de experiencia en soporte técnico, help desk y desarrollo web full stack.",
+    phone: "+593992543979", 
   };
+  
+  const whatsappMessage = "Hola Andrés, me gustaría conectar contigo.";
+  
 
   //---------------------------------------------------------
   // Datos de contacto
@@ -30,59 +34,43 @@ export default function Home() {
   //Iconos de contacto
 
   const contacts = [
-    { type: "phone", icon: "/assets/icons/instagram.png", action: "tel:+1234567890" },
-    { type: "email", icon: "/assets/icons/email.png", action: "mailto:example@example.com" },
-    { type: "whatsapp", icon: "/assets/icons/whatsapp.png", action: "https://wa.me/1234567890" },
     {
       type: "location",
       icon: "/assets/icons/location.png",
-      address: "123 Fake St, Fake City",
-      hours: "9am - 5pm",
+      text: "Dirección",
+      address:
+        "Juan Montalvo 53 y Abdón Calderón, Urb. Ontaneda, Conocoto, Quito, Ecuador",
+      hours: "Lunes a Viernes, 9:00 AM - 6:00 PM",
+      googleMapsLink:
+        "https://www.google.com/maps/place/ANVETCORP+Inform%C3%A1tica+y+Tecnolog%C3%ADa/@-0.2987752,-78.4889591,18z/data=!4m20!1m13!4m12!1m4!2m2!1d-78.4802151!2d-0.3126909!4e1!1m6!1m2!1s0x91d5a2b0678255c3:0xcba1b16c406a929d!2sanvetcorp!2m2!1d-78.4897359!2d-0.2979049!3m5!1s0x91d5a2b0678255c3:0xcba1b16c406a929d!8m2!3d-0.2979049!4d-78.4897359!16s%2Fg%2F11bwfmfm_t?entry=ttu&g_ep=EgoyMDI0MDkzMC4wIKXMDSoASAFQAw%3D%3D",
     },
-  ];
-
-  // ---------------------------------------------------------
-  // Botones de contacto
-
-  // const contacts = [
-  //   { type: "phone", icon: "/assets/icons/phone.png", action: "tel:+1234567890", text: "Llámame" },
-  //   {
-  //     type: "email",
-  //     icon: "/assets/icons/email.png",
-  //     action: "mailto:info@example.com",
-  //     text: "Email",
-  //   },
-  //   {
-  //     type: "whatsapp",
-  //     icon: "/assets/icons/whatsapp.png",
-  //     action: "https://wa.me/1234567890",
-  //     text: "WhatsApp",
-  //   },
-  //   {
-  //     type: "location",
-  //     icon: "/assets/icons/location.png",
-  //     action: "https://maps.google.com/?q=Your Location",
-  //     text: "Ubicación",
-  //   },
-  // ];
+    {
+      type: "phone",
+      icon: "/assets/icons/phone.png",
+      action: "tel:+593992543979",
+      text: "Llamar",
+    },
+    {
+      type: "email",
+      icon: "/assets/icons/email.png",
+      action: "mailto:aveintimilla@anvetcorp.com",
+      text: "email",
+    },
+    {
+      type: 'whatsapp',
+      icon: '/assets/icons/whatsapp.png',
+      action: 'https://wa.me/+593992543979' ,
+      text: 'WhatsApp',
+    },
+  ];  
 
   //---------------------------------------------------------
   // Social media
   //---------------------------------------------------------
 
   //---------------------------------------------------------
-  //Iconos de redes sociales
+  //Iconos y botones de redes sociales
 
-  // const socialMediaLinks = [
-  //   { type: 'facebook', icon: 'facebook.png', url: 'https://www.facebook.com/yourpage' },
-  //   { type: 'instagram', icon: 'instagram.png', url: 'https://www.instagram.com/yourprofile' },
-  //   { type: 'tiktok', icon: 'whatsapp.png', url: 'https://www.tiktok.com/@yourusername' },
-  //   { type: 'twitter', icon: 'twitter.png', url: 'https://twitter.com/yourusername' },
-  //   { type: 'youtube', icon: 'youtube.png', url: 'https://www.youtube.com/c/YourChannelName' }
-  // ];
-
-  // ---------------------------------------------------------
-  // Botones de redes sociales
 
   const socialMediaLinks = [
     {
@@ -148,9 +136,18 @@ export default function Home() {
   //---------------------------------------------------------
 
   const slidesData = [
-    { image: "/assets/images/slides/image1.png", title: "Baneficios Increíbles" },
-    { image: "/assets/images/slides/image2.jpg", title: "Préstamos inmediatos" },
-    { image: "/assets/images/slides/image3.jpg", title: "Valores importantes y destacados" },
+    {
+      image: "/assets/images/slides/image1.png",
+      title: "Baneficios Increíbles",
+    },
+    {
+      image: "/assets/images/slides/image2.jpg",
+      title: "Préstamos inmediatos",
+    },
+    {
+      image: "/assets/images/slides/image3.jpg",
+      title: "Valores importantes y destacados",
+    },
   ];
 
   //---------------------------------------------------------
@@ -264,8 +261,8 @@ export default function Home() {
   return (
     <main className="">
       <div id="inicio">
-        <ProfileCard profile={profileData} />
-        <ContactIcons contacts={contacts} />
+        <ProfileCard profile={profileData} whatsappMessage={whatsappMessage} />
+        <ContactButtons contacts={contacts} />
         <SocialMediaButtons socialLinks={socialMediaLinks} />
       </div>
 
@@ -282,7 +279,9 @@ export default function Home() {
         <Slider slides={slidesData} />
       </div>
       <div id="curriculum" className="my-spacing-4">
-        <h1 className="section-subtitle py-spacing-2">Educación y Experiencia Laboral</h1>
+        <h1 className="section-subtitle py-spacing-2">
+          Educación y Experiencia Laboral
+        </h1>
         <EducationExperience entries={entries} />
       </div>
       <VideoPlayer

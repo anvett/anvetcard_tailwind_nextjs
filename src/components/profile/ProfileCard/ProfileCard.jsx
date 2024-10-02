@@ -1,6 +1,8 @@
 import Image from 'next/image';
 
-const ProfileCard = ({ profile }) => {
+const ProfileCard = ({ profile, whatsappMessage }) => {
+  const whatsappLink = `https://wa.me/${profile.phone}?text=${encodeURIComponent(whatsappMessage)}`;
+
   return (
     <div className="flex justify-center p-5 w-full">
       <div className="card w-full max-w-sm  shadow-xl text-center sm:max-w-md lg:max-w-lg xl:max-w-xl">
@@ -10,9 +12,11 @@ const ProfileCard = ({ profile }) => {
         <div className="card-body bg-trasparent ">
           <h2 className="section-title text-light">{profile.name}</h2>
           <h4 className="section-subtitle text-light">{profile.title}</h4>
-          <p className='text-size-1 text'>{profile.description} </p>
+          <p className='text-size-1 text'>{profile.description}</p>
           <div className="card-actions justify-center mt-4">
-            <button className="btn main-button">Conectar</button>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn main-button">
+              Conectar
+            </a>
           </div>
         </div>
       </div>
@@ -21,3 +25,4 @@ const ProfileCard = ({ profile }) => {
 };
 
 export default ProfileCard;
+
