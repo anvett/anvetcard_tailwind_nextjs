@@ -11,7 +11,7 @@ const Navbar = () => {
   const pathname = usePathname(); // Obtén la ruta actual
 
   return (
-    <div className="navbar bg-dark text-size-3 px-4 flex items-center justify-between relative z-50">
+    <div className="navbar bg-navbar text-size-3 px-4 flex items-center justify-between relative z-50 border-b-2 border-light ">
       <div className="flex items-center space-x-4">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost btn-bg-primary text-primary lg:hidden">
@@ -19,7 +19,7 @@ const Navbar = () => {
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16"
               fill="currentColor"
-              className="size-spacing-1"
+              className="size-spacing-1 text-secondary"
             >
               <path
                 fillRule="evenodd"
@@ -53,10 +53,10 @@ const Navbar = () => {
           </ul>
         </div>
         <Image
-          src="/assets/images/logo.png"
-          width={80}
-          height={80}
-          alt="Logo de Coop. Sup"
+          src="/assets/images/logo.jpg"
+          width={50}
+          height={50}
+          alt="Logo AnvetCorp"
           suppressHydrationWarning
         />
         
@@ -65,7 +65,7 @@ const Navbar = () => {
         <ul className="menu menu-horizontal text-size-2 font-semibold px-1 gap-2">
           <li>
             <Link
-              className={`nav-link ${pathname === "/" ? "text-terciary" : "text-primary"}`}
+              className={`nav-link ${pathname === "/" ? "text-terciary" : "text-light"}`}
               href="#inicio"
             >
               Inicio
@@ -74,7 +74,7 @@ const Navbar = () => {
           
           <li>
             <Link
-              className={`nav-link ${pathname === "/faqs" ? "text-terciary" : "text-primary"}`}
+              className={`nav-link ${pathname === "/faqs" ? "text-terciary" : "text-light"}`}
               href="#info_pago"
             >
               Info. Pago
@@ -83,7 +83,7 @@ const Navbar = () => {
           <li>
             <Link
               className={`nav-link ${
-                pathname === "/simulador-credito" ? "text-terciary" : "text-primary"
+                pathname === "/simulador-credito" ? "text-terciary" : "text-light"
               }`}
               href="#productos"
             >
@@ -92,7 +92,7 @@ const Navbar = () => {
           </li>
           <li>
             <Link
-              className={`nav-link ${pathname === "/contacto" ? "text-terciary" : "text-primary"}`}
+              className={`nav-link ${pathname === "/contacto" ? "text-terciary" : "text-light"}`}
               href="#curriculum"
             >
               CV

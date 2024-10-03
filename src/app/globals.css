@@ -38,7 +38,7 @@
 /* --------------------------------------------- */
 
 .bg-image-background {
-  background-image: url("/assets/images/hero.jpg");
+  background-image: url("/assets/images/background1.webp");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -46,7 +46,7 @@
 
 .bg-image-with-overlay {
   background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
-    url("/assets/images/hero.jpg");
+    url("/assets/images/background1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

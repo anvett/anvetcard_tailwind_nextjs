@@ -29,6 +29,8 @@ module.exports = {
         'primary-hover': '#004f62',  
         'secondary-hover': '#d0a0ff',  
         'dark-hover': '#3e4345',  
+        'navbar': '#060008',
+        'footer': '#2E1036',
       },
       fontFamily: {
         'primary': ['Montserrat', 'sans-serif'],
