@@ -1,6 +1,4 @@
 
-
-
 import "./globals.css";
 
 import Navbar from "@/components/navbar/Navbar";
@@ -8,14 +6,15 @@ import Footer from "@/components/footer/Footer";
 
 // Metadata configurada sin viewport
 export const metadata = {
-  title: "Andrés Veintimilla - Ingeniero Informático",
+  title: "Andrés Veintimilla Digital Card",
   description: "Ingeniero Informático, máster en TI y presidente de Anvetcorp SAS",
   keywords: "Andrés Veintimilla, Ingeniero Informático, soporte técnico, Anvetcorp, desarrollo web",
   authors: [{ name: "Andrés Veintimilla" }],
   robots: "index, follow",
+  
   openGraph: {
-    title: "Andrés Veintimilla - Ingeniero Informático",
-    description: "Ingeniero Informático, máster en TI y presidente de Anvetcorp SAS",
+    title: "Andrés Veintimilla Digital Card",
+    description: "Digital Card de Andrés Veintimilla, Presidente de Anvetcorp SAS",
     url: "https://www.anvetcorp.com/",
     images: [
       {
@@ -32,7 +31,7 @@ export const metadata = {
     images: ["/assets/images/logo.png"],
   },
   icons: {
-    icon: "/public/assets/icons/favicon.ico",
+    icon: "/assets/icons/favicon.ico",
   },
 };
 

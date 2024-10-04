@@ -98,7 +98,7 @@ const GalleryWithModal = ({ items }) => {
                 <p className="modal-highlight">{selectedItem.highlight}</p>
                 <div className="flex gap-spacing-1 pt-spacing-2">
                   <a
-                    href={`https://wa.me/yournumber?text=Desearía%20saber%20más%20sobre%20${encodeURIComponent(
+                    target="_blank" rel="noopener noreferrer" href={`https://wa.me/+593992543979?text=Desearía%20saber%20más%20sobre%20${encodeURIComponent(
                       selectedItem.title
                     )}`}
                     className="main-button text-sm"

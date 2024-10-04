@@ -1,49 +1,3 @@
-// import React from "react";
-// import Image from "next/image";
-
-// const EducationExperience = ({ entries }) => {
-//   return (
-//     <div className="container mx-auto p-4">
-//       {entries.map((entry, index) => (
-//         <div key={index} className="p-2">
-//           <div className="collapse collapse-arrow border border-base-300  rounded-box bg-primary">
-//             <input type="checkbox" className="peer" id={`toggle-${index}`} hidden />{" "}
-//             {/* Agregado id y clase para controlar el estado */}
-//             <label
-//               htmlFor={`toggle-${index}`}
-//               className="collapse-title text-xl font-medium block cursor-pointer accordion-title"
-//             >
-//               {" "}
-//               {/* Etiqueta for apuntando al input */}
-//               {entry.title} - <strong>{entry.date}</strong>
-//             </label>
-//             <div className="collapse-content peer-checked:block hidden bg-light text-primary accordion-detail ">
-//               {" "}
-//               {/* Utiliza peer-checked para controlar la visibilidad */}
-//               <ul className="list-disc pl-5">
-//                 {entry.details.map((detail, detailIndex) => (
-//                   <li key={detailIndex}>{detail}</li>
-//                 ))}
-//               </ul>
-//               <div className="flex justify-center">
-//                 <Image
-//                   src={entry.image}
-//                   alt="Certificate"
-//                   width={600} // Define un ancho específico
-//                   height={400} // Define una altura específica
-//                   className="my-spacing-2 max-w-300 h-auto mx-auto sm:my-spacing-3" // Asegura que esté centrado y controla el tamaño máximo
-//                 />
-//               </div>
-//             </div>
-//           </div>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default EducationExperience;
-
 import React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
@@ -75,7 +29,7 @@ const EducationExperience = ({ entries }) => {
       {entries.map((entry, index) => (
         <motion.div
           key={index}
-          className="p-2"
+          className="p-2 w-full"  // Asegura que el contenedor se ajuste al ancho completo
           custom={index}
           initial="hidden"
           animate="visible"
@@ -86,23 +40,23 @@ const EducationExperience = ({ entries }) => {
             whileHover="hover"
             animate="rest"
             className="collapse collapse-arrow border border-base-300 rounded-box bg-primary"
-            variants={zoomOnHover} // Aplicando el zoom en hover
+            variants={zoomOnHover}
           >
             <input type="checkbox" className="peer" id={`toggle-${index}`} hidden />
             <label
               htmlFor={`toggle-${index}`}
-              className="collapse-title text-xl font-medium block cursor-pointer accordion-title whitespace-normal"
+              className="collapse-title text-base sm:text-lg lg:text-xl font-medium block cursor-pointer accordion-title whitespace-normal break-words"
             >
               {entry.title} - <strong>{entry.date}</strong>
             </label>
 
             <AnimatePresence>
               <motion.div
-                className="collapse-content peer-checked:block hidden bg-light text-primary accordion-detail"
+                className="collapse-content peer-checked:block hidden bg-light text-primary accordion-detail text-xs sm:text-sm md:text-base lg:text-lg"
                 initial="hidden"
                 animate="visible"
                 exit="exit"
-                variants={slideDown} // Animación suave para desplegar el accordion
+                variants={slideDown}
               >
                 <ul className="list-disc pl-5">
                   {entry.details.map((detail, detailIndex) => (
@@ -110,7 +64,6 @@ const EducationExperience = ({ entries }) => {
                   ))}
                 </ul>
 
-                {/* Animación de ease-in en la imagen */}
                 <motion.div
                   className="flex justify-center"
                   initial={{ opacity: 0, scale: 0.8 }}
@@ -121,7 +74,7 @@ const EducationExperience = ({ entries }) => {
                     alt="Certificate"
                     width={600}
                     height={400}
-                    className="my-spacing-2 max-w-300 h-auto mx-auto sm:my-spacing-3"
+                    className="my-spacing-2 w-full max-w-full h-auto sm:max-w-md lg:max-w-lg"  // Asegura el ajuste en pantallas pequeñas
                   />
                 </motion.div>
               </motion.div>
@@ -134,3 +87,4 @@ const EducationExperience = ({ entries }) => {
 };
 
 export default EducationExperience;
+

@@ -95,7 +95,7 @@
 } 
 
 .modal-highlight{
-  @apply text-terciary text-size-2 font-secondary font-bold pb-spacing-1 pt-spacing-3  sm:text-size-4;
+  @apply text-red-500 text-size-2 font-secondary font-bold pb-spacing-1 pt-spacing-3  sm:text-size-4;
 }
 
 /* --------------------------------------------- */
@@ -151,3 +151,4 @@
 .modal-close-btn {
   @apply bg-secondary hover:bg-dark-hover text-dark font-bold rounded-full p-3 transition duration-300 ease-in-out transform hover:scale-105;
 }
+
