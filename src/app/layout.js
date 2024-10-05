@@ -15,11 +15,13 @@ export const metadata = {
   openGraph: {
     title: "Andrés Veintimilla Digital Card",
     description: "Digital Card de Andrés Veintimilla, Presidente de Anvetcorp SAS",
-    url: "https://www.anvetcorp.com/",
+    url: "https://aveintimillacard.anvetcorp.com",
     images: [
       {
-        url: "/assets/images/sharedimage.jpeg",
+        url: "https://aveintimillacard.anvetcorp.com/assets/images/sharedimage.jpeg",
         alt: "Anvetcorp Logo",
+        width: 1200, // Ajuste de tamaño recomendado para OpenGraph
+        height: 630,
       },
     ],
     type: "website",

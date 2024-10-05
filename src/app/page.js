@@ -204,7 +204,7 @@ export default function Home() {
 
   const slidesData = [
     {
-      image: "/assets/images/slides/repotenciacion_ssd_ram.jpg",
+      image: "/assets/images/slides/repotenciacion_ssd_ram.png",
       title: "Repotenciación con SSD y RAM",
     },
     {
@@ -218,7 +218,11 @@ export default function Home() {
     {
       image: "/assets/images/slides/anvetcard.jpg",
       title: "Tarjetas de presentación digitales",
-    }
+    },
+    {
+      image: "/assets/images/slides/web_design.png",
+      title: "Diseño web y hosting",
+    },
   ];
 
   //---------------------------------------------------------

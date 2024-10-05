@@ -92,7 +92,7 @@ const GalleryWithModal = ({ items }) => {
 
                 <ul className="text-left list-disc list-inside text-primary">
                   {selectedItem.description.map((desc, index) => (
-                    <li key={index}>{desc}</li>
+                    <li className="py-spacing-1 sm:spacing:2" key={index}>{desc}</li>
                   ))}
                 </ul>
                 <p className="modal-highlight">{selectedItem.highlight}</p>

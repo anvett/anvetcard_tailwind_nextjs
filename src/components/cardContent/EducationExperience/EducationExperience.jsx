@@ -60,7 +60,7 @@ const EducationExperience = ({ entries }) => {
               >
                 <ul className="list-disc pl-5">
                   {entry.details.map((detail, detailIndex) => (
-                    <li key={detailIndex}>{detail}</li>
+                    <li className="py-spacing-1 sm:py-spacing-2" key={detailIndex}>{detail}</li>
                   ))}
                 </ul>
 
