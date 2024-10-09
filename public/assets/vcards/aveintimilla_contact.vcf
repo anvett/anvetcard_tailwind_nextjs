@@ -1,0 +1,9 @@
+BEGIN:VCARD
+VERSION:3.0
+FN:Andrés Veintimilla
+ORG:Anvetcorp S.A.S.
+TEL;TYPE=WORK,VOICE:+593992543979
+EMAIL:aveintimilla@anvetcorp.com
+ADR;TYPE=WORK:;;Juan Montalvo 53;Quito;;170156;Ecuador
+URL:https://www.anvetcorp.com
+END:VCARD

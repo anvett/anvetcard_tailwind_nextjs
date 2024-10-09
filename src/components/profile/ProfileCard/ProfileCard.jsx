@@ -1,7 +1,5 @@
-
-
-import Image from 'next/image';
-import { motion } from 'framer-motion';
+import Image from "next/image";
+import { motion } from "framer-motion";
 
 const ProfileCard = ({ profile, whatsappMessage }) => {
   const whatsappLink = `https://wa.me/${profile.phone}?text=${encodeURIComponent(whatsappMessage)}`;
@@ -22,12 +20,14 @@ const ProfileCard = ({ profile, whatsappMessage }) => {
       <div className="card w-full max-w-sm shadow-xl text-center sm:max-w-md lg:max-w-lg xl:max-w-xl">
         {/* Imagen del perfil con animación */}
         <figure className="px-10 pt-10 bg-transparent">
-          <motion.div
-            initial="hidden"
-            animate="visible"
-            variants={imageZoomIn}
-          >
-            <Image src={profile.image} alt="Profile picture" width={300} height={300} className="rounded-full mb-spacing-2" />
+          <motion.div initial="hidden" animate="visible" variants={imageZoomIn}>
+            <Image
+              src={profile.image}
+              alt="Profile picture"
+              width={300}
+              height={300}
+              className="rounded-full mb-spacing-2"
+            />
           </motion.div>
         </figure>
 
@@ -64,8 +64,20 @@ const ProfileCard = ({ profile, whatsappMessage }) => {
             whileTap={{ scale: 0.95 }}
             className="card-actions justify-center mt-4"
           >
-            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="btn main-button">
+            <a
+              href={whatsappLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn main-button"
+            >
               Conectar
+            </a>
+            <a
+              href="/assets/vcards/aveintimilla_contact.vcf"
+              download="anvetcorp_contact.vcf"
+              className="btn main-button "
+            >
+              Guardar Contacto
             </a>
           </motion.div>
         </div>
